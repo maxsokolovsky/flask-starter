@@ -48,5 +48,22 @@ services:
     ports:
       - '6379'
 
+  hello_world:
+    image: 'maxsokolovsky/server'
+    ports:
+      - '8000:8000'
+
+  100world:
+    labels:
+      shipyard.route: '/100'
+    image: 'maxsokolovsky/server'
+    ports:
+      - '8001:8000'
+
+  hello1.world:
+    image: 'maxsokolovsky/server'
+    ports:
+      - '8002:8000'
+
 volumes:
   postgres:
